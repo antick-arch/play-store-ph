@@ -7,7 +7,6 @@ const useAppData = () => {
     const fetchData = async () => {
       const res = await fetch("/data.json");
       const data = await res.json();
-      console.log(data);
       setTimeout(() => {
         setAppData(data);
         setLoader(false);

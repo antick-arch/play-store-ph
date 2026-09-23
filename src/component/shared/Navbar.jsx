@@ -28,8 +28,8 @@ const Navbar = () => {
           </h2>
         </div>
         <ul className="flex justify-between gap-10 font-semibold text-xl">
-          {navItems.map((items) => (
-            <MyNavLink to={items.path}>{items.text}</MyNavLink>
+          {navItems.map((items,ind) => (
+            <MyNavLink key={ind} to={items.path}>{items.text}</MyNavLink>
           ))}
         </ul>
         <button className="btn btn-primary bg-linear-to-r from-[#632ee3] to-[#9f62f2] border-none text-white">
